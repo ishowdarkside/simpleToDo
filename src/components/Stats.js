@@ -3,17 +3,18 @@ export default function Stats({ tasks }) {
   const tasksComplete = tasks.filter((el) => el.complete).length;
   return (
     <footer className="stats">
-      {tasks.length > 0 && tasksComplete < tasks.length ? (
+      {tasks.length > 0 && tasksComplete !== tasks.length && (
         <>
           <p>Total Tasks: {tasks.length} ✔</p>
           <p>In progress: {tasksInProgress} 🕔</p>
           <p>COMPLETE: {tasksComplete} 👍</p>
         </>
-      ) : (
-        <h1>Create your List 😁</h1>
+      )}
+      {tasks.length === 0 && (
+        <h1 style={{ fontWeight: 500 }}>Start creating your list 🤗</h1>
       )}
       {tasks.length > 0 && tasks.length === tasksComplete ? (
-        <h1>You are good to go!👍</h1>
+        <h1 style={{ fontWeight: 500 }}>You are good to go!👍</h1>
       ) : null}
     </footer>
   );
