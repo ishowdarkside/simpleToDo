@@ -1,3 +1,6 @@
+Simple To-Do app created using React in order to practice learned concepts so far(states,props,derived state,children prop,updating state,etc...)
+online:https://to-do-ajdin.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
